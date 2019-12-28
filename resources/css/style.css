@@ -1,0 +1,525 @@
+/*------------------
+    BASIC SETUP
+-------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #ffffff;
+    color: #000;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.clearfix {zoom:1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+/*-----------------
+------REUSABLE------
+---------------------------*/
+.row {
+    max-width: 1900px;
+    margin: 0 50px;
+}
+
+section {
+    padding: 50px 0;
+}
+
+section:nth-child(odd)
+{
+    background-color: #000;
+    color: #fff;
+}
+
+section:nth-child(odd) h2
+{
+    color: #f7f0f0;
+}
+
+section:nth-child(odd) h3
+{
+    color: #8e8e8e;
+}
+
+section:nth-child(odd) ul,
+section:nth-child(odd) img
+{
+    border: 1px solid white;
+}
+
+section:nth-child(even) ul,
+section:nth-child(even) img
+{
+    border: 1px solid #000;
+}
+
+section:nth-child(even)
+{
+    background-color: whitesmoke;
+}
+
+
+/*-----------------------
+--------HEADINGS----
+----------------------------*/
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+h1 {
+    font-size: 300%;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+h2 {
+    color: #000;
+    font-size: 200%;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 140%;
+    margin-bottom: 40px;
+    color: #4d4d4d;
+}
+
+h3:after {
+    display: block;
+    height: 2px;
+    background-color: #000;
+    content: " ";
+    border-bottom: 2px solid #fff;
+    width: 100px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+/*------------------------
+---------HEADER-----
+-------------------------------------*/
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)),url(img/1.jpg);
+    background-size:cover;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.first_h {
+    position: absolute;
+    top: 44%;
+    left: 48%;
+    transform: translate(-50%,-50%);
+    color:#fff;
+    line-height: 1.5;
+    width: 75%;
+}
+
+.first_h p{
+    word-spacing: 2px;
+    font-size: 90%;
+    width: 100%;
+    text-align: center;
+}
+
+/*------------------
+---------ACM LOGO----------
+-------------------------------*/
+#logo h1 {
+  font-size: 174%;
+  padding: 0;
+  line-height: 1;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-stretch:expanded;
+  letter-spacing: 3px;
+  float: left;
+  line-height: 1.5;
+}
+
+#logo h1 a,
+#logo h1 a:hover {
+  color: #fff;
+  padding-left: 10px;
+  border-left: 4px solid #007bff;
+  float: left;
+  text-decoration: none;
+}
+
+
+/*-------------
+------------NAV BAR-----
+--------------------------------*/
+.main-nav{
+    float: right;
+    list-style: none;
+    margin-top: 37px;
+    font-size:80%;
+}
+
+.main-nav li {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    display: inline-block;
+    margin-left: 40px;
+    white-space: nowrap;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 100%;
+    transition: color 0.5s,font-size 0.5s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    color: #0b6bd3;
+    font-size: 99.2%;
+}
+
+/*---------Mobile-nav----------------*/
+.mobile-nav {
+    float: right;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 200%;
+    color: #fff;
+    display: none;
+    margin-top: 30px;
+}
+
+
+/*----------Sticky navi-----------------*/
+.sticky {
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height: 90px;
+    margin: 0;
+    background-color: #000;
+    z-index: 9999;
+    transition: display 2s;
+}
+
+.sticky .mobile-nav {
+}
+
+/*--------------
+-----------EVENTS----------
+---------------------------------*/
+.first-event {
+    height: 800px;
+}
+
+.poster {
+    width: 30%;
+    padding-left: 5%;
+    float: left;
+}
+
+.poster img{
+    width: 95%;
+    height: 500px;
+}
+
+.side {
+    width: 70%;
+    padding-right: 0;
+    float: left;
+}
+
+.description {
+    margin: 4% 4% 0 10%;
+}
+
+description p{
+    text-align: justify;
+}
+
+
+
+/*-----------
+--------ONLY FOR SCROLLING GALLERY-------
+---------------------------------------------*/
+.pic {
+    width: 100%; /*same width as li*/
+    overflow: hidden;
+    margin: 0;
+    background-color: #000; 
+}
+
+.pic img {
+    opacity: 0.7;
+    width: 270px;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s,opacity 0.5s;
+}
+
+.pic img:hover {
+    opacity: 1;
+    transform: scale(1.03);
+}
+
+/*-----------------------------FROM SIMPLY SCROLL WEBSITE---------------------------*/
+/* Container DIV - automatically generated */
+.simply-scroll-container { 
+    position: relative;
+}
+
+/* Clip DIV - automatically generated */
+.simply-scroll-clip { 
+	position: relative;
+	overflow: hidden;
+}
+
+/* UL/OL/DIV - the element that simplyScroll is inited on
+Class name automatically added to element */
+.simply-scroll-list { 
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+	
+.simply-scroll-list li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+	
+.simply-scroll-list li img {
+	border: none;
+	display: block;
+}
+
+/* Master button styles - note that up and down versions 
+have been removed in this example */
+
+.simply-scroll-btn {
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	z-index:3;
+	cursor: pointer;
+}
+	
+.simply-scroll-btn-left {
+	left: 6px;
+	bottom: 6px;
+    background-image: url(img/arrow-left.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.simply-scroll-btn-left.disabled {
+	background-position: 0 0 !important;
+}
+
+.simply-scroll-btn-left:hover {
+	background-position: 0 -88px;
+}
+
+.simply-scroll-btn-right {
+	right: 6px;
+	bottom: 6px;
+    background-image: url(img/arrow-right.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.simply-scroll-btn-right.disabled {
+	background-position: 84px 0 !important;
+}
+.
+.simply-scroll-btn-right:hover {
+	background-position: 84px -88px;
+}
+
+/* Custom class modifications - adds to / overrides above
+.simply-scroll is default base class */
+
+/* Container DIV */
+.simply-scroll { 
+    width: 70%;
+    height: auto;
+    margin-left: 15%;
+}
+
+/* Clip DIV */
+.simply-scroll .simply-scroll-clip {
+	width: 100%;
+	height: 270px;
+}
+	
+/* Explicitly set height/width of each list item */	
+.simply-scroll .simply-scroll-list li {
+	float: left; /* Horizontal scroll only */
+    height: auto;
+}
+/*------------------------------------------------------------------------------------------------*/
+
+
+/*Animations*/
+.js-img {
+    opacity: 1;
+}
+
+.js-img.animated {
+    opacity: 1;
+}
+
+/*----------------------
+-------------FOOTER--------------
+-------------------------------------*/
+#footer {
+  background: #000;
+  padding: 0 0 30px 0;
+  color: #eee;
+}
+
+#footer .row {
+    margin: 0;
+    padding: 0 10%;
+}
+
+
+#footer .footer-top {
+  background: #111;
+  padding: 60px 0 30px 0;
+}
+
+#footer .footer-top .footer-info {
+  margin-bottom: 30px;
+  float: left;
+  width: 30%;
+}
+
+#footer .footer-top .footer-info h3 {
+  font-size: 200%;
+  color: #eee;
+  text-align: left;
+  margin: 0 0 20px 0;
+  padding: 2px 0 0px 10px;
+  line-height: 1;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  border-left: 4px solid #007bff;
+}
+
+#footer .footer-top .footer-info h3:after {
+ height: 0;
+ border-bottom: 0;
+}
+
+#footer .footer-top .footer-info p {
+  font-size: 80%;
+  line-height: 24px;
+  margin-bottom: 0;
+  font-family: "Montserrat", sans-serif;
+  color: #eee;
+}
+
+#footer .footer-top h4 {
+  font-size: 90%;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+#footer .footer-top h4::before,
+#footer .footer-top h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+}
+
+#footer .footer-top h4::before {
+  right: 0;
+  background: #555;
+}
+
+#footer .footer-top h4::after {
+  background: #007bff;
+  width: 60px;
+}
+
+#footer .footer-top .footer-links {
+  margin-bottom: 30px;
+  float: left;
+  width: 26%;
+  margin: 0 4%;
+}
+
+#footer .footer-top .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#footer .footer-top .footer-links ul i {
+  padding-right: 8px;
+  color: #ddd;
+}
+
+#footer .footer-top .footer-links ul li {
+  border-bottom: 1px solid #333;
+  padding: 10px 0;
+}
+
+#footer .footer-top .footer-links ul li:first-child {
+  padding-top: 20px;
+}
+
+#footer .footer-top .footer-links ul a {
+  color: #eee;
+  text-decoration: none;
+  font-size: 80%;
+}
+
+#footer .footer-top .footer-links ul a:hover {
+  color: #007bff;
+}
+
+#footer .footer-top .footer-contact {
+  margin-bottom: 30px;
+  float: left;
+  width: 33%;
+}
+
+#footer .footer-top .footer-contact p {
+  line-height: 26px;
+    margin-top: 20px;
+    font-size: 80%;
+}
