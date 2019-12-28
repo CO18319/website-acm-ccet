@@ -1,0 +1,321 @@
+/*--------------
+---------Big tablets to 1200px----------
+------------------------------------------*/
+@media only screen and (max-width:1200px) {
+    
+    /*-------------Basic setup------------*/
+    .row { margin: 0 2%; }
+    
+    h1 { font-size: 250%;}
+    
+    h2 {font-size: 170%;} 
+    
+    h3 {font-size: 120%;}
+    
+    p {font-size: 90%;}
+    
+    
+    /*-------------ACM LOGO---------------*/
+    #logo h1 {
+        font-size: 134%;
+        line-height: 1.2;
+        text-align: left;
+        width: 30%;
+    }
+    
+    /*-----------NAV BAR----------------*/
+    .main-nav { display: block;}
+    
+    .main-nav li { display: inline-block;}
+    
+    
+    /*-------------EVENTS------------------*/
+    .first-event { height: 690px;}
+    
+    .poster{ width: 40%;}
+
+    .poster img {
+        width: 80%;
+        height: 360px;
+        margin-left: 10%;
+    }
+
+    .side { width: 50%; }
+
+    /*---------SCROLLING GALLERY-----------*/
+    .simply-scroll { width: 75%; }
+
+    .simply-scroll .simply-scroll-clip {
+        height: 240px;
+    }
+    
+    .pic img {
+        height: 240px;
+    }
+}
+
+/*--------------
+Small tablets to big tablets: from 768 px to 1023px
+--------------------------------------------------*/
+@media only screen and (max-width:1023px) {
+    
+    body {
+        font-size: 19px;
+    }
+    
+      /*-------------ACM LOGO---------------*/
+    #logo h1 {
+        width: 80%;
+        font-size: 160%;
+        margin-top: 30px;
+    }
+    
+   
+    
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding:5% 0 0 0;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.86),rgba(0, 0, 0, 0.79));
+        width: 40%;
+        height: 100vh;
+        z-index: 9999;
+    }
+    
+     /*-----------NAV BAR----------------*/
+    .main-nav li {
+        display: block;
+        margin-bottom: 25px;
+        font-size: 112%;
+        font-weight: 700;
+    }
+    
+    .mobile-nav {
+        display: inline-block;
+    }
+
+     /*--------EVENTS--------------*/
+    .first-event {
+        height: auto; 
+        overflow: hidden;
+    }
+    .poster {
+        width: 100%;
+    }
+
+    .poster img {
+        width: 50%;
+        height: auto;
+        margin-left:22%;
+    }
+
+    .side {
+        width: 100%;
+        margin-top: 7%;
+    }
+
+    .description {
+        margin: 7%;
+    }
+    
+    .description p {
+        font-size: 100%;
+        text-align: justify;
+    }
+    
+    /*---------SCROLLING GALLERY-----------*/
+    .simply-scroll { 
+        width: 100%;
+        margin: 0;
+    }
+
+    .simply-scroll .simply-scroll-clip {
+        height: 250px;
+    }
+    
+    .pic img {
+        height: 250px;
+    }
+    
+    
+    /*----------FOOTER------------------------*/
+    #footer .footer-top .footer-info {
+      margin-bottom: 30px;
+      float: left;
+      width: 50%;
+    }
+    
+    #footer .footer-top .footer-links {
+      margin-bottom: 30px;
+      float: left;
+      width: 36%;
+      margin: 0 7%;
+    }
+    
+    #footer .footer-top .footer-contact {
+      margin-bottom: 30px;
+      float: left;
+      width: 30%;
+      padding: 0;
+      margin-top: 50px;
+      margin-left: -15%;
+    }
+}
+
+/*--------------------
+Small phones to small tablets: from 481 px to 767px
+-------------------------------------------------------*/
+@media only screen and (max-width:767px) {
+     body {
+        font-size: 17px;
+    }
+    
+    header {
+        background-size:cover;
+        background-position: center;
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-attachment: fixed;
+        height: 100vh;
+    }
+    
+    /*-----------ACM LOGO-----------*/
+    #logo h1 {
+        width: 80%;
+        margin-top: 3%;
+    }
+    
+    /*---------NAV BAR----------------*/
+    .mobile-nav {
+        display: inline-block;
+    }
+
+    /*-----------EVENTS--------------*/
+    .first-event {
+        height: auto;
+    }
+    
+    .side {
+        margin-top: 10%;
+    }
+    
+    .poster img {
+        width: 70%;
+        margin-left: 13%;
+    }
+    
+      /*---------SCROLLING GALLERY-----------*/
+    .simply-scroll { 
+        width: 100%;
+        margin: 0;
+    }
+
+    .simply-scroll .simply-scroll-clip {
+        height: 240px;
+    }
+    
+    .pic img {
+        height: 240px;
+    }
+    
+    /*------------FOOTER----------------------*/
+     #footer .footer-top .footer-info {
+      margin-bottom: 30px;
+      width: 100%;
+      padding:0 7%;
+    }
+    
+    #footer .footer-top .footer-links {
+      margin-bottom: 30px;
+      width: 100%;
+      padding-right: 15%;
+      margin: 0 7%;
+    }
+    
+    #footer .footer-top .footer-contact {
+      margin-bottom: 30px;
+      width: 100%;
+      padding-right: 15%;
+      margin: 0 7%;
+      margin-top: 30px;
+    }
+}
+
+
+    
+/*---------------------
+Small phones: from 0 to 480px*/
+---------------------------------------------
+@media only screen and (max-width:480px) {
+    body {
+        font-size: 17px;
+    }
+    
+     header {
+        background-size:cover;
+        background-position: center;
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-attachment: fixed;
+        height: 100vh;
+    }
+    
+    /*---------------------ACM LOGO-----------------------*/
+    #logo h1 {
+        width: 60%;
+        margin-top: 3%;
+    }
+    
+    /*-------------NAV BAR----------------------------*/
+    .mobile-nav {
+        display: inline-block;
+        margin-top: 5%;
+    }
+
+    /*----------------EVENTS-----------------*/
+    .first-event {
+        height: auto;
+    }
+    
+    .side {
+        margin-top: 10%;
+    }
+    
+    .poster img {
+        width: 70%;
+        margin-left: 13%;
+        padding: 0;
+    }
+    
+     /*---------SCROLLING GALLERY-----------*/
+    .simply-scroll { 
+        width: 100%;
+        margin: 0;
+    }
+
+    .simply-scroll .simply-scroll-clip {
+        height: 230px;
+    }
+    
+    .pic img {
+        height: 230px;
+        width: 220px;
+    }
+    
+    /*------------FOOTER----------------------*/
+    #footer .footer-top .footer-links {
+      margin-bottom: 30px;
+      width: 100%;
+      padding-right: 15%;
+      margin: 0 7%;
+    }
+    
+    #footer .footer-top .footer-contact {
+      margin-bottom: 30px;
+      width: 100%;
+      padding-right: 15%;
+      margin: 0 7%;
+      margin-top: 30px;
+    }
+}
